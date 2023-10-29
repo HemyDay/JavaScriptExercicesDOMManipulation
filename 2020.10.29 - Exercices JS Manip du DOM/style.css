@@ -66,3 +66,21 @@ ul {
     margin-bottom: 20px;
     font-size: medium;
 }
+
+.alertElement {
+    padding: 10px;
+    display: inline-block;
+    width: 47%;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    cursor : pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.hideElements , .showElements {
+    align-self: center;
+    margin-bottom: 10px;
+}

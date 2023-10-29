@@ -1,0 +1,68 @@
+*{
+    margin : 0px;
+    padding: 0px;
+}
+
+body {
+    padding : 5%;
+}
+
+.exo {
+    width: 92%;
+    padding : 2%;
+    background-color: lightgray;
+    margin: 2%;
+    border-radius: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+#exo1{
+    cursor : pointer;
+    user-select: none;
+    width : 30%;
+    padding : 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+button {
+    cursor : pointer;
+    padding: 10px;
+    display: inline-block;
+    width: 49%;
+}
+
+ul {
+    margin: 20px;
+}
+
+.deletable {
+    cursor : pointer;
+    user-select: none;
+}
+
+#interactiveTextOutput {
+    padding : 2%;
+    background-color: whitesmoke;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    width: 96%;
+    font-size: medium;
+}
+
+
+#interactiveTextInput {
+    padding : 2%;
+    background-color: whitesmoke;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    width: 96%;
+    margin-bottom: 20px;
+    font-size: medium;
+}

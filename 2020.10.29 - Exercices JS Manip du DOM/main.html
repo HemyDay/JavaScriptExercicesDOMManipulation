@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercices Manip du Dom</title>
+</head>
+<body>
+
+    <section class="exo">
+        <h2 >Exercices 1 : Changez la couleur de fond d'un élément lorsqu'il est cliqué. </h2>
+        <p id="exo1"> Cliquez moi dessus pour changer ma couleur !</p>
+    </section>
+
+    <section class="exo">
+        <h2> Exercice 2 : Ajoutez un nouvel élément à une liste lorsqu'un bouton est cliqué. </h2>
+        <h2> Exercice 3 : Supprimez un élément d'une liste lorsqu'il est double-cliqué. </h2>
+        
+        <button id="generateNewListItem" type="button">Générer un nouvel élément</button>
+        <button id="resetListElements" type="button">Revenir à la liste par défaut</button>
+
+        <ul id="listToIncrement">
+            <li class='deletable'> Element 1 </li>
+            <li class='deletable'> Element 2 </li>
+            <li class='deletable'> Element 3 </li>
+        </ul>
+
+    </section>
+
+    <section class="exo">
+        <h2 >Exercices 4 : Modifiez le texte d'un élément lorsqu'un champ de saisie est modifié. </h2>
+
+       
+        <input id="interactiveTextInput" type="text" placeholder="Entrez votre texte ici" >
+
+        <p id="interactiveTextOutput"> Votre texte appraitra ici </p>
+    </section>
+
+    
+    
+</body>
+    <script type="text/javascript" src="script.js"></script>
+</html>

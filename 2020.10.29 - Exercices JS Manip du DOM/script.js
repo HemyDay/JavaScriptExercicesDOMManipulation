@@ -106,7 +106,11 @@ interactiveTextInput.addEventListener('input', changeTextFromInput);
 
 // 5. Exercice : Affichez une alerte avec le texte d'un élément lorsqu'il est survolé. --------------------------------
 
+// VARIABLES DECLARATIONS ---------------------------------
+
 let allAlertElements = document.getElementsByClassName('alertElement');
+
+// FUNCTIONS DECLARATIONS ---------------------------------
 
 function showAlert(){
     message = this.textContent;
@@ -121,9 +125,7 @@ function resetAlertElementsList() {
 
 // ACTUAL CODE  -------------------------------------------
 
-if (allAlertElements!= null) {
-    resetAlertElementsList();
-}
+if (allAlertElements!= null) {resetAlertElementsList();}
 
 
 // 6. Exercice : Masquez un élément lorsqu'un bouton est cliqué. ------------------------------------------------------
@@ -150,3 +152,25 @@ document.getElementById("showElements").addEventListener('click', showElements);
 
 // 9. Exercice : Changez l'image d'un élément lorsqu'elle est survolée. -----------------------------------------------
 
+// VARIABLES DECLARATIONS ---------------------------------
+let allImagesToSwitch = document.querySelectorAll("img");
+
+// FUNCTIONS DECLARATIONS ---------------------------------
+
+function changeImagefromAtoB() {
+    this.src = this.src.replace("A.png", "B.png");
+}
+
+function changeImagefromBtoA() {
+    this.src = this.src.replace("B.png", "A.png");
+}
+
+function addEventListenerToChangeImage() {
+    for (var i = 0; i < allImagesToSwitch.length; i++) {
+        allImagesToSwitch[i].addEventListener('mouseenter', changeImagefromAtoB);
+        allImagesToSwitch[i].addEventListener('mouseout', changeImagefromBtoA);
+    }
+}
+
+// ACTUAL CODE  -------------------------------------------
+addEventListenerToChangeImage();

@@ -1,5 +1,11 @@
 // 1. Exercice : Changez la couleur de fond d'un élément lorsqu'il est cliqué.-----------------------------------------
 
+// VARIABLES DECLARATIONS ---------------------------------
+
+let exo1 = document.querySelector("#exo1");
+
+// FUNCTIONS DECLARATIONS ---------------------------------
+
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
     var color = '#';
@@ -13,17 +19,26 @@ function changeColor() {
     this.style.backgroundColor = getRandomColor();
 }
 
-document.getElementById("exo1").addEventListener('click', changeColor);
+// ACTUAL CODE  -------------------------------------------
+
+if (exo1!= null) {exo1.addEventListener('click', changeColor);}
 
 
 
 // 2. Exercice : Ajoutez un nouvel élément à une liste lorsqu'un bouton est cliqué.------------------------------------
 
-let listToIncrement = document.getElementById("listToIncrement")
-let nbOfItems = listToIncrement.children.length+1;
+// VARIABLES DECLARATIONS ---------------------------------
+
+let listToIncrement = document.querySelector("#listToIncrement")
+let generateNewListIteButton = document.querySelector("#generateNewListItem");
+let resetListItemsButton = document.querySelector("#resetListElements");
+let nbOfItems = 0;
+
+// FUNCTIONS DECLARATIONS ---------------------------------
 
 function addListItem() {
     listToIncrement.innerHTML += `<li class='deletable'> Element ${nbOfItems} </li>`;
+
     resetDeletableList();
     nbOfItems++;
 }
@@ -34,17 +49,27 @@ function resetListElements() {
     nbOfItems = listToIncrement.children.length+1;
 }
 
-document.getElementById("generateNewListItem").addEventListener('click', addListItem);
-document.getElementById("resetListElements").addEventListener('click', resetListElements);
+// ACTUAL CODE  -------------------------------------------
+
+if (generateNewListIteButton!= null && resetListItemsButton!= null && listToIncrement!= null) {
+    nbOfItems = listToIncrement.children.length+1
+    generateNewListIteButton.addEventListener('click', addListItem);
+    resetListItemsButton.addEventListener('click', resetListElements);
+}
 
 
 
 // 3. Exercice : Supprimez un élément d'une liste lorsqu'il est double-cliqué. ----------------------------------------
+
+// VARIABLES DECLARATIONS ---------------------------------
+
+let allDeletableElements = document.getElementsByClassName("deletable");
+
+// FUNCTIONS DECLARATIONS ---------------------------------
+
 function deleteSelf() {
     this.remove();
 }
-
-let allDeletableElements = document.getElementsByClassName('deletable');
 
 function resetDeletableList() {
     for (var i = 0; i < allDeletableElements.length; i++) {
@@ -52,14 +77,19 @@ function resetDeletableList() {
     }
 }
 
-resetDeletableList();
+// ACTUAL CODE  -------------------------------------------
 
+if (allDeletableElements!= null) {resetDeletableList();}
 
 
 // 4. Exercice : Modifiez le texte d'un élément lorsqu'un champ de saisie est modifié. --------------------------------
 
+// VARIABLES DECLARATIONS ---------------------------------
+
 let interactiveTextOutput = document.querySelector('#interactiveTextOutput');
 let interactiveTextInput = document.querySelector('#interactiveTextInput');
+
+// FUNCTIONS DECLARATIONS ---------------------------------
 
 function changeTextFromInput() {
     interactiveTextOutput.textContent = this.value;
@@ -68,6 +98,8 @@ function changeTextFromInput() {
         interactiveTextOutput.textContent = "Votre texte appraitra ici";
     }
 }
+
+// ACTUAL CODE  -------------------------------------------
 
 interactiveTextInput.addEventListener('input', changeTextFromInput);
 
@@ -87,7 +119,11 @@ function resetAlertElementsList() {
     }
 }
 
-resetAlertElementsList();
+// ACTUAL CODE  -------------------------------------------
+
+if (allAlertElements!= null) {
+    resetAlertElementsList();
+}
 
 
 // 6. Exercice : Masquez un élément lorsqu'un bouton est cliqué. ------------------------------------------------------
